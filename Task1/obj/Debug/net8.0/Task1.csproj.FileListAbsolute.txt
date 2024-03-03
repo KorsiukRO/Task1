@@ -12,3 +12,4 @@ C:\Users\korsiuk_ro\Desktop\Jundev\Rider\Task1\Task1\obj\Debug\net8.0\refint\Tas
 C:\Users\korsiuk_ro\Desktop\Jundev\Rider\Task1\Task1\obj\Debug\net8.0\Task1.pdb
 C:\Users\korsiuk_ro\Desktop\Jundev\Rider\Task1\Task1\obj\Debug\net8.0\Task1.genruntimeconfig.cache
 C:\Users\korsiuk_ro\Desktop\Jundev\Rider\Task1\Task1\obj\Debug\net8.0\ref\Task1.dll
+C:\Users\korsiuk_ro\Desktop\Jundev\Rider\Task1\Task1\obj\Debug\net8.0\Task1.sourcelink.json

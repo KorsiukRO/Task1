@@ -1,41 +1,29 @@
-// namespace Task1;
-//
-// public class JeepCar : Car
-// {
-//     // - швидкість має бути в межах від 150 до 240
-//     // - прохідність має бути в межах від 60 до 100
-//     
-//     private int speed;
-//     private int passability;
-//     
-//     public override required int Speed 
-//     {
-//         get => speed;
-//         init
-//         {
-//             if (value is > 149 and < 241 )
-//             {
-//                 speed = value;
-//             }
-//             else
-//             {
-//                 Console.WriteLine("біда");
-//             }
-//         }
-//     }
-//     
-//     public override required int Passability
-//     {
-//         get => passability;
-//         init {
-//             if (value is > 59 and < 101)
-//             {
-//                 passability = value;
-//             }
-//             else
-//             {
-//                 Console.WriteLine("біда");
-//             }
-//         }
-//     }
-// }
+namespace Task1;
+
+public class JeepCar : Car
+{
+    private const int minSpeed = 150;
+    private const int maxSpeed = 240;
+    private const int minPassability = 60;
+    private const int maxPassability = 100;
+    
+    public JeepCar(int speed, int passability, string? manufacturer, string? model)
+    {
+        Speed = speed;
+        Passability = passability;
+        Manufacturer = manufacturer;
+        Model = model;
+    }
+    
+    public override int Speed
+    {
+        get => speed;
+        set { speed = (value >= minSpeed && value <= maxSpeed) ? value : throw new ArgumentException($"Швидкість має бути в діапазоні {minSpeed} - {maxSpeed} км/год"); }
+    }
+    
+    public override int Passability
+    {
+        get => passability;
+        set { passability = (value >= minPassability && value <= maxPassability) ? value : throw new ArgumentException($"Прохідність має бути в діапазоні {minPassability} - {maxPassability}");}
+    }
+}
