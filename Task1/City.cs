@@ -18,8 +18,7 @@ public class City : Race
             Console.WriteLine($"Авто: {i.Manufacturer} {i.Model} (Швидкість: {i.Speed}, прохідність: {i.Passability})");
         }
         Console.WriteLine();
-        
-        Array.Sort(car);
+        Array.Sort(car, new SpeedComparer());
         Array.Reverse(car);
         var rand = new Random();
         foreach (var i in car)
@@ -28,16 +27,16 @@ public class City : Race
             {
                 if (rand.Next(100) < 50)
                 {
-                    Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n----------------------------------------");
+                    Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n");
                     return;
                 }    
             }
             else if (rand.Next(100) < 30)
             {
-                Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n----------------------------------------");
+                Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n");
                 return;
             }
         }
-        Console.WriteLine($"У гонці \"{NameRace}\" перемагає {car[0].Manufacturer} {car[0].Model}\n----------------------------------------");
+        Console.WriteLine($"У гонці \"{NameRace}\" перемагає {car[0].Manufacturer} {car[0].Model}\n");
     }
 }

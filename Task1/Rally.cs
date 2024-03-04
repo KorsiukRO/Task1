@@ -17,7 +17,7 @@ public class Rally : Race
         }
         Console.WriteLine();
         
-        Array.Sort(car);
+        Array.Sort(car, new PassabilityComparer());
         Array.Reverse(car);
         var rand = new Random();
         foreach (var i in car)

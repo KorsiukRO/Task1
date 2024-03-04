@@ -2,7 +2,7 @@ using System.Linq.Expressions;
 
 namespace Task1;
 
-public abstract class Car : IComparable
+public abstract class Car
 {
     protected int speed;
     protected int passability;
@@ -67,16 +67,4 @@ public abstract class Car : IComparable
         Console.WriteLine($"Прохідність: {Manufacturer} {Model} {tempPassability} --> {this.passability}");
         Console.WriteLine();
     }
-
-    public virtual int CompareTo(object? obj) // мало зрозумів переписав з книжки ст. 376
-    {
-        if (obj is Car car)
-        {
-            return this.speed.CompareTo(car.speed);
-        }
-
-        throw new ArgumentException("Параметр не є об'єктом типу Car!");
-    }
-    
-    
 }
