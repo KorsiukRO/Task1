@@ -25,12 +25,12 @@ public abstract class Car
     public virtual string? Manufacturer
     {
         get => manufacturer;
-        set { manufacturer = (value != null) ? value : throw new ArgumentException("Виробник авто має бути вказаний");}
+        set { manufacturer = (value != null) ? value : throw new ArgumentException("The Manufacturer must be specified.");}
     }
     public virtual string? Model
     {
         get => model;
-        set { model = (value != null) ? value : throw new ArgumentException("Модель авто має бути вказана");}
+        set { model = (value != null) ? value : throw new ArgumentException("The model must be specified.");}
     }
 
     public bool IsSpeedTune
@@ -50,7 +50,7 @@ public abstract class Car
     {
         if (!(speed >= (float)this.speed * 0.1 && speed <= (float)this.speed * 0.3))
         {
-            throw new ArgumentException($"Ви можете покращити швидкість в діапазоні від {(float)this.speed * 0.1} і до {(float)this.speed * 0.3}.");
+            throw new ArgumentException($"You can improve the speed in the range from {(float)this.speed * 0.1} to {(float)this.speed * 0.3}.");
         }
         int tempSpeed = this.speed;
         this.speed += speed;
@@ -59,7 +59,7 @@ public abstract class Car
 
         if (!(passability >= (float)this.passability * 0.1 && passability <= (float)this.passability * 0.3))
         {
-            throw new ArgumentException($"Ви можете покращити швидкість в діапазоні від {(float)this.passability * 0.1} і до {(float)this.passability * 0.3}.");            
+            throw new ArgumentException($"You can improve the passability in the range from {(float)this.passability * 0.1} to {(float)this.passability * 0.3}.");            
         }
         int tempPassability = this.passability;
         this.passability += passability;

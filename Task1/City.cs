@@ -12,10 +12,10 @@ public class City : Race
 
     public void StartRace(Car[] car)
     {
-        Console.WriteLine($"Траса: {NameRace}, прохідність: {PassabilityRace}\n");
+        Console.WriteLine($"Track: {NameRace}, passability: {PassabilityRace}\n");
         foreach (var i in car)
         {
-            Console.WriteLine($"Авто: {i.Manufacturer} {i.Model} (Швидкість: {i.Speed}, прохідність: {i.Passability})");
+            Console.WriteLine($"Car: {i.Manufacturer} {i.Model} (speed: {i.Speed}, passability: {i.Passability})");
         }
         Console.WriteLine();
         Array.Sort(car, new SpeedComparer());
@@ -27,16 +27,16 @@ public class City : Race
             {
                 if (rand.Next(100) < 50)
                 {
-                    Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n");
+                    Console.WriteLine($"{i.Manufacturer} {i.Model} wins the \"{NameRace} race.\"\n");
                     return;
                 }    
             }
             else if (rand.Next(100) < 30)
             {
-                Console.WriteLine($"У гонці \"{NameRace}\" перемагає {i.Manufacturer} {i.Model}\n");
+                Console.WriteLine($"{i.Manufacturer} {i.Model} wins the \"{NameRace} race.\"\n");
                 return;
             }
         }
-        Console.WriteLine($"У гонці \"{NameRace}\" перемагає {car[0].Manufacturer} {car[0].Model}\n");
+        Console.WriteLine($"{car[0].Manufacturer} {car[0].Model} wins the \"{NameRace} race.\"\n");
     }
 }

@@ -10,6 +10,6 @@ public class PassabilityComparer : IComparer
         {
             return t1.Passability.CompareTo(t2.Passability);
         }
-        throw new ArgumentException("Параметр не є об'єктом типу Car!");
+        throw new ArgumentException("The parameter is not an object of type Car!");
     }
 }

@@ -18,12 +18,12 @@ public class JeepCar : Car
     public override int Speed
     {
         get => speed;
-        set { speed = (value >= minSpeed && value <= maxSpeed) ? value : throw new ArgumentException($"Швидкість має бути в діапазоні {minSpeed} - {maxSpeed} км/год"); }
+        set { speed = (value >= minSpeed && value <= maxSpeed) ? value : throw new ArgumentException($"The speed should be in the range of {minSpeed} - {maxSpeed} km/h."); }
     }
     
     public override int Passability
     {
         get => passability;
-        set { passability = (value >= minPassability && value <= maxPassability) ? value : throw new ArgumentException($"Прохідність має бути в діапазоні {minPassability} - {maxPassability}");}
+        set { passability = (value >= minPassability && value <= maxPassability) ? value : throw new ArgumentException($"The passability should be in the range of {minPassability} - {maxPassability}."); }
     }
 }

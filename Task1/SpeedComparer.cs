@@ -10,6 +10,6 @@ public class SpeedComparer : IComparer
         {
             return t1.Speed.CompareTo(t2.Speed);
         }
-        throw new ArgumentException("Параметр не є об'єктом типу Car!");
+        throw new ArgumentException("The parameter is not an object of type Car!");
     }
 }
